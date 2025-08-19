@@ -1,0 +1,66 @@
+# 经验条目模板
+# 复制此模板来创建新的经验条目
+
+id: ""                        # 格式: category-subcategory-brief-name-YYYY
+title: ""                     # 简洁明确的标题
+category: ""                  # 主分类: architecture | patterns | debugging | performance | testing | deployment
+subcategory: ""               # 子分类，参考 docs/experience-schema.md
+tags: []                      # 相关标签，如: ["react", "typescript", "performance"]
+difficulty: ""                # beginner | intermediate | advanced | expert
+tech_stack: []                # 技术栈，如: ["Node.js", "React", "PostgreSQL"]
+description: ""               # 1-2句话的简短描述
+
+context:
+  project_type: ""            # 如: "电商网站", "企业管理系统", "移动应用"
+  team_size: 0                # 团队人数
+  timeline: ""                # 如: "6个月", "2周迭代"
+  business_domain: ""         # 业务领域，如: "金融", "教育", "医疗"
+
+problem:
+  scenario: ""                # 具体遇到的问题场景
+  challenges: []              # 面临的具体挑战
+  constraints: []             # 技术、时间、资源等约束
+
+solution:
+  approach: ""                # 解决问题的总体思路
+  implementation: ""          # 具体实现步骤和方法
+  code_examples:              # 代码示例列表
+    - language: ""            # 编程语言
+      filename: ""            # 文件名或路径
+      description: ""         # 代码作用说明
+      code: |                 # 代码内容
+        # 在这里放置代码
+      explanation: ""         # 代码解释
+      highlight_lines: []     # 重点关注的行号
+      related_files: []       # 相关文件路径
+  architecture_diagram: ""    # 架构图文件路径（可选）
+
+benefits:
+  performance_gain: ""        # 性能提升情况
+  maintainability: ""         # 可维护性改善
+  scalability: ""             # 可扩展性提升
+  cost_reduction: ""          # 成本降低情况
+
+tradeoffs:
+  pros: []                    # 优势列表
+  cons: []                    # 劣势列表
+  alternatives:               # 替代方案
+    - name: ""                # 方案名称
+      description: ""         # 方案描述
+      pros: []                # 优势
+      cons: []                # 劣势
+      implementation_effort: "" # low | medium | high
+
+applicable_scenarios: []      # 适用的场景类型
+anti_patterns: []            # 要避免的反模式
+
+related_experiences: []       # 相关经验条目ID
+
+metadata:
+  author: ""                  # 作者姓名或ID
+  source_project: ""          # 来源项目名称
+  created_at: ""              # 创建日期 YYYY-MM-DD
+  updated_at: ""              # 更新日期 YYYY-MM-DD  
+  version: "1.0"              # 版本号
+  review_status: "draft"      # draft | reviewed | published
+  quality_score: 0            # 质量评分 1-10
