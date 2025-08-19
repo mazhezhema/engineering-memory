@@ -59,22 +59,50 @@ engineering-memory/
 
 ## 经验格式标准
 
-每个经验条目包含：
-- 背景描述
-- 问题场景
-- 解决方案
-- 代码示例
-- 适用范围
-- 相关技术栈
-- 难度等级
-- 更新记录
+每个经验条目采用**Markdown格式**，包含：
+- **元信息块**: 来源项目、适用范围、难度等级、技术栈
+- **背景描述**: 问题产生的背景和环境
+- **问题场景**: 具体遇到的问题和挑战
+- **解决方案**: 解决思路、具体实现、代码示例
+- **收益分析**: 性能提升、可维护性改善等
+- **权衡分析**: 优劣势对比和替代方案
+- **适用场景**: 何时使用该解决方案
+- **注意事项**: 需要避免的反模式
+- **相关经验**: 关联的其他经验条目
 
 ## 快速开始
 
-1. 浏览经验库目录，找到相关技术栈
-2. 搜索特定问题或场景关键词
-3. 查看完整经验条目和代码示例
-4. 根据模板快速应用到新项目
+### 🔍 搜索经验
+```bash
+# 按关键词搜索
+python tools/search.py -k "react"
+
+# 按技术栈搜索  
+python tools/search.py -t "PostgreSQL"
+
+# 按难度搜索
+python tools/search.py -d "advanced"
+
+# 按分类搜索
+python tools/search.py -c "performance"
+
+# 查看统计信息
+python tools/search.py --stats
+
+# 列出所有经验
+python tools/search.py --list
+```
+
+### 📝 贡献经验
+1. 复制经验模板 `templates/quick-template.md`
+2. 填写完整的经验信息
+3. 放置在相应的分类目录下
+4. 使用验证工具检查格式：`python tools/validate.py your-file.md`
+
+### 🛠️ 工具使用
+- **搜索工具**: `tools/search.py` - 支持多维度搜索经验
+- **验证工具**: `tools/validate.py` - 检查经验格式和质量
+- **转换工具**: `tools/yaml_to_md.py` - YAML转Markdown（已弃用）
 
 ## 贡献指南
 

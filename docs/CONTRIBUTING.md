@@ -24,26 +24,26 @@ git checkout -b add-new-experience
 
 ```bash
 # 复制模板文件
-cp templates/experience-template.yaml experiences/分类/你的经验名称-YYYY.yaml
+cp templates/quick-template.md experiences/分类/你的经验名称-YYYY.md
 ```
 
 ### 3. 填写经验内容
 
-参考 [经验条目数据模型](experience-schema.md) 填写完整信息：
+使用**Markdown格式**填写完整信息：
 
-#### 必填字段
-- `id`: 唯一标识符，格式为 `category-subcategory-brief-name-YYYY`
-- `title`: 简洁明确的标题
-- `category`: 主分类
-- `description`: 1-2句话的简短描述
-- `problem`: 问题描述和背景
-- `solution`: 解决方案和实现
+#### 必填部分
+- **标题**: 简洁明确的经验标题
+- **元信息块**: 来源、适用范围、难度、技术栈
+- **背景描述**: 问题产生的背景
+- **问题场景**: 具体问题和挑战
+- **解决方案**: 解决思路、实现、代码示例
 
 #### 建议填写
-- `code_examples`: 具体的代码示例
-- `benefits`: 解决方案带来的收益
-- `tradeoffs`: 优劣势分析
-- `applicable_scenarios`: 适用场景
+- **收益分析**: 性能提升、可维护性等
+- **权衡分析**: 优劣势和替代方案
+- **适用场景**: 什么情况下使用
+- **注意事项**: 需要避免的反模式
+- **相关经验**: 关联的其他经验
 
 ### 4. 质量标准
 
@@ -93,7 +93,7 @@ code_examples:
 
 ```bash
 # 验证单个文件
-python tools/validate.py experiences/patterns/你的文件.yaml
+python tools/validate.py experiences/patterns/你的文件.md
 
 # 验证整个目录
 python tools/validate.py experiences/
@@ -106,7 +106,7 @@ python tools/search.py -k "你的关键词"
 
 1. 提交你的更改
 ```bash
-git add experiences/你的分类/你的文件.yaml
+git add experiences/你的分类/你的文件.md
 git commit -m "feat: 添加React组件组合模式经验"
 git push origin add-new-experience
 ```
